@@ -1,3 +1,6 @@
 langchain
 langchain-deepseek
+langchain-huggingface
+langchain-text-splitters
 python-dotenv
+sentence-transformers
