@@ -202,7 +202,7 @@ def print_result(result):
 def main():
     _, chat_chain = initialize()
     session_number = 1
-    print("星河图书馆问答助手。输入 /new 开始新对话，/exit 退出。")
+    print("LangChain RAG Assistant。输入 /new 开始新对话，/exit 退出。")
 
     while True:
         try:
