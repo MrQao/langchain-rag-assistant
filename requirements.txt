@@ -4,3 +4,5 @@ langchain-huggingface
 langchain-text-splitters
 python-dotenv
 sentence-transformers
+langgraph>=1.2
+langgraph-checkpoint-sqlite
