@@ -8,4 +8,5 @@ __pycache__/
 venv/
 .DS_Store
 vector_store.json
+hardware_vector_store.json
 repair_checkpoints.sqlite*

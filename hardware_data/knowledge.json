@@ -1,0 +1,532 @@
+{
+  "reviewed_on": "2026-11-11",
+  "description": "根据厂商官方英文资料编写的中文排障摘要。实际型号、硬件版本、地区和固件可能影响功能与菜单。",
+  "sources": {
+    "c200-spec": {
+      "title": "Tapo C200 V1 Specifications",
+      "url": "https://www.tapo.com/en/product/tapo-c200-security-camera/v1/1-pack/specs"
+    },
+    "c210-spec": {
+      "title": "Tapo C210 V1 Specifications",
+      "url": "https://www.tapo.com/en/product/tapo-c210-security-camera/v1/1-pack/specs"
+    },
+    "setup": {
+      "title": "How to Set Up Your Tapo Camera Using the Tapo App",
+      "url": "https://www.tapo.com/en/faqs/how-to-set-up-your-tapo-camera-using-the-tapo-app"
+    },
+    "wifi": {
+      "title": "Tapo Camera Not Connecting to Wi-Fi? How to Fix It",
+      "url": "https://www.tp-link.com/us/support/faq/2747/"
+    },
+    "view": {
+      "title": "Tapo/Kasa Camera Not Working: Cannot View Camera Troubleshooting Guide",
+      "url": "https://www.tapo.com/en/faqs/tapokasa-camera-not-working-cannot-view-camera-troubleshooting-guide"
+    },
+    "signal": {
+      "title": "How to Check Wi-Fi Signal Strength on Tapo and Kasa",
+      "url": "https://www.tp-link.com/us/support/faq/3261/"
+    },
+    "reset": {
+      "title": "How to Factory Reset Your Tapo Camera: Two Methods",
+      "url": "https://www.tapo.com/us/faqs/how-to-factory-reset-your-tapo-camera-two-methods"
+    },
+    "format": {
+      "title": "Tapo Camera SD Card Installation and Format Guide",
+      "url": "https://www.tp-link.com/us/support/faq/3088/"
+    },
+    "sd": {
+      "title": "How to Fix Tapo or Kasa Camera SD Card Not Formatting or Being Recognized",
+      "url": "https://www.tp-link.com/us/support/faq/2749/"
+    },
+    "record": {
+      "title": "View Continuous Recordings from Your Tapo Camera on the Tapo App",
+      "url": "https://www.tp-link.com/us/support/faq/2617/"
+    },
+    "notify": {
+      "title": "How to Troubleshoot Tapo and Kasa Notifications Not Working or Delayed",
+      "url": "https://www.tp-link.com/us/support/faq/4853/"
+    },
+    "detect": {
+      "title": "Detection is not working on Tapo/Kasa Camera",
+      "url": "https://www.tp-link.com/us/support/faq/3418/"
+    },
+    "invert": {
+      "title": "What should I do if the video image is upside down on my Tapo or Kasa Camera?",
+      "url": "https://www.tp-link.com/us/support/faq/2625/"
+    },
+    "audio": {
+      "title": "How to Fix No Sound and Audio Quality Issues on Your Tapo Camera",
+      "url": "https://www.tp-link.com/us/support/faq/4958/"
+    }
+  },
+  "entries": [
+    {
+      "id": "C200-WIFI",
+      "device_models": [
+        "Tapo C200"
+      ],
+      "topic": "配网",
+      "title": "C200 V1 无线频段与加密方式",
+      "symptoms": [
+        "C200 V1 能连 5G Wi-Fi 吗？",
+        "我的 C200 V1 连不上只开 WPA3 的路由器。"
+      ],
+      "content": "C200 V1 的无线规格为 2.4 GHz、WPA/WPA2-PSK。只有 5 GHz 或仅 WPA3 的网络不符合这份 V1 规格；先确认硬件版本，再核对路由器设置。",
+      "source_ids": [
+        "c200-spec"
+      ],
+      "scope": "仅据官方英文站 C200 V1 规格。其他硬件版本须重新查对应规格。"
+    },
+    {
+      "id": "C210-WIFI",
+      "device_models": [
+        "Tapo C210"
+      ],
+      "topic": "配网",
+      "title": "C210 V1 无线频段与加密方式",
+      "symptoms": [
+        "C210 V1 为什么搜不到 5 GHz 网络？",
+        "C210 V1 支持 WPA3-only 无线网络吗？"
+      ],
+      "content": "C210 V1 的无线规格为 2.4 GHz、WPA/WPA2-PSK。配网失败时先确认是否用了 5 GHz 或 WPA3-only 网络，再按实际硬件版本核对规格。",
+      "source_ids": [
+        "c210-spec"
+      ],
+      "scope": "仅据官方英文站 C210 V1 规格。其他硬件版本须重新查对应规格。"
+    },
+    {
+      "id": "SETUP-START",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "配网",
+      "title": "初次安装并添加摄像头",
+      "symptoms": [
+        "新买的摄像头第一次怎么添加到手机？",
+        "刚开箱，应该用哪个 App 配网？"
+      ],
+      "content": "使用 Tapo App 登录 TP-Link ID，点添加设备并选择标签对应型号。通电后按 App 指引确认待配网状态，再连接家庭无线网络。不同版本的指示灯、复位方式须核对对应指南。",
+      "source_ids": [
+        "setup"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "SETUP-CHANGE",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "配网",
+      "title": "更换路由器、无线名称或密码",
+      "symptoms": [
+        "换了路由器之后摄像头连不上 Wi-Fi。",
+        "改了无线名称和密码后摄像头离线了。"
+      ],
+      "content": "更换无线网络后，官方设置指南要求重置摄像头，再用 Tapo App 重新添加并填写新网络信息。重置前说明会恢复配置并需要重新设置，确认用户愿意操作，按对应硬件指南执行。",
+      "source_ids": [
+        "setup"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "WIFI-HOTSPOT",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "配网",
+      "title": "连接 Tapo_Cam 热点提示无互联网",
+      "symptoms": [
+        "连上 Tapo_Cam 后手机提示无法上网，要断开吗？",
+        "iPhone 提示 Unable to Connect to Your Tapo Device。"
+      ],
+      "content": "配网时手机连接 Tapo_Cam_XXXX 热点，显示无互联网可以继续返回 Tapo App。确认没有自动切回其他 Wi-Fi；iPhone/iPad 核对 Tapo 的本地网络权限，暂时停用手机 VPN 后重试。",
+      "source_ids": [
+        "wifi"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "WIFI-SSID",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "配网",
+      "title": "找不到家庭 Wi-Fi 或隐藏 SSID",
+      "symptoms": [
+        "配网时列表里找不到家里的 Wi-Fi 名称。",
+        "路由器隐藏了 SSID，摄像头怎么连接？"
+      ],
+      "content": "先确认路由器开启符合型号规格的加密无线网络，并把摄像头靠近路由器。刷新网络列表；隐藏的 SSID 可在 Other Network 中手动填写。不要把临时设备热点和家庭 Wi-Fi 混淆。",
+      "source_ids": [
+        "wifi"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "WIFI-PAIR",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "配网",
+      "title": "配对失败或获取不到 IP 地址",
+      "symptoms": [
+        "配对失败，一直提示 Failed to receive an IP address。",
+        "摄像头接扩展器总是 Pairing Failed，怎么办？"
+      ],
+      "content": "出现 Pairing Failed、Unable to Join Your Network 或获取 IP 失败时，先核对 Wi-Fi 密码和信号。检查路由器设备数上限；连接扩展器失败时，改在主路由器旁测试。一次改变一项并记录结果。",
+      "source_ids": [
+        "wifi"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "VIEW-POWER",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "离线",
+      "title": "反复掉线、重启或供电不稳定",
+      "symptoms": [
+        "摄像头加了电源延长线之后经常离线。",
+        "一天掉线好几次，有时像是自己重启。"
+      ],
+      "content": "先使用随设备提供的原装电源，暂时移除额外的电源延长线，再观察是否还掉线。让手机与摄像头处于同一 Wi-Fi 测试，检查客用网或客户端隔离，并尝试重启摄像头和路由器。",
+      "source_ids": [
+        "view"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "VIEW-REMOTE",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "离线",
+      "title": "家里能看，外面手机流量看不到",
+      "symptoms": [
+        "在家 Wi-Fi 能看，一出门用流量就显示离线。",
+        "局域网正常，远程看不到画面，怎么排查？"
+      ],
+      "content": "先区分同一 Wi-Fi 能否观看，以及切到手机流量后能否观看。确认手机和家中网络可上网，检查手机 VPN 或网络过滤。云连接仍异常时，把网络和测试结果交给厂商支持，不直接认定摄像头损坏。",
+      "source_ids": [
+        "view"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "VIEW-SLOW",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "画面",
+      "title": "预览转圈、卡顿或画面加载缓慢",
+      "symptoms": [
+        "实时画面一直转圈，加载很慢。",
+        "高清预览很卡，降低画质能排查吗？"
+      ],
+      "content": "先在同一 Wi-Fi 测试预览，再暂时调低 Video & Display 中的视频质量，观察是否改善。检查信号和周围干扰，对比手机流量或另一网络的表现，记录是否只在远程观看时卡顿。",
+      "source_ids": [
+        "view"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "SIGNAL-RSSI",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "离线",
+      "title": "查看摄像头信号强度并调整位置",
+      "symptoms": [
+        "怎么查看摄像头的 RSSI 信号强度？",
+        "隔了两堵墙信号很差，移动位置有用吗？"
+      ],
+      "content": "在设备设置的设备信息中查看 Wi-Fi 信号或 RSSI。无线信号弱时，将摄像头靠近路由器、减少墙体等遮挡，再比较连接表现。菜单名称随 App 版本可能不同。",
+      "source_ids": [
+        "signal"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "RESET-CONFIRM",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "重置",
+      "title": "恢复出厂设置前确认影响与型号",
+      "symptoms": [
+        "离线摄像头能直接在 App 里重置吗？",
+        "恢复出厂设置前要注意什么？"
+      ],
+      "content": "恢复出厂设置会清除设备配置，需要重新添加。先确认用户接受影响，并核对硬件版本指南中的 RESET 位置与时长。App 移除设备的重置方法要求设备在线；离线设备需使用对应实体复位方法。",
+      "source_ids": [
+        "reset"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "SD-FORMAT",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "存储卡",
+      "title": "安装 microSD 卡与初始化",
+      "symptoms": [
+        "新卡插进去提示需要初始化，怎么操作？",
+        "格式化摄像头存储卡会删除以前录像吗？"
+      ],
+      "content": "云台机型按指南露出卡槽，核对方向插卡，避免强行插入。App 的 Storage & Recording / Local Storage 可格式化 microSD 卡。格式化会删除卡上全部数据，须先备份并征得用户确认。",
+      "source_ids": [
+        "format"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "SD-DETECT",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "存储卡",
+      "title": "存储卡未识别或不兼容",
+      "symptoms": [
+        "插上 microSD 后一直提示未检测到存储卡。",
+        "存储卡在电脑上正常，摄像头却识别不了。"
+      ],
+      "content": "先核对对应型号、硬件版本的卡容量和兼容性。关闭摄像头电源后重新插卡再开机，检查卡是否损伤；可在读卡器或另一设备确认能否识别，再用兼容的高耐久卡对比。",
+      "source_ids": [
+        "sd"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "SD-FAILED",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "存储卡",
+      "title": "反复初始化或格式化失败",
+      "symptoms": [
+        "microSD 初始化失败，格式化一直报错。",
+        "存储卡隔几天就要求重新格式化。"
+      ],
+      "content": "先备份重要录像，确认 App 和固件版本及卡兼容性。可清理 App 缓存后再测试，或换兼容的高耐久卡对比。仍失败时记录卡品牌、容量、设备版本和报错交给支持，避免反复无备份格式化。",
+      "source_ids": [
+        "sd"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "RECORD-ENABLE",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "录像",
+      "title": "装了卡却没有本地录像",
+      "symptoms": [
+        "插卡成功也能看实时画面，可是没有录像。",
+        "开了移动侦测为什么没有全天录像？"
+      ],
+      "content": "在设备设置的 Storage & Recording 中确认 Local Recording 已启用，同时检查卡状态和录制计划是否覆盖所需时段。单独开启事件侦测不等于已经配置全天连续录像。",
+      "source_ids": [
+        "record"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "RECORD-GAPS",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "录像",
+      "title": "录制计划不符，连续录像与事件录像切换",
+      "symptoms": [
+        "录像一段一段的，中间很长时间空白。",
+        "只在有人移动时录像，怎样改成连续录像？",
+        "一直录像停不下来，只想有人经过才保存视频"
+      ],
+      "content": "核对录制计划。Detection Recording 仅在触发事件时录像，Continuous Recording 在计划时段连续录制。按需求设置各时段模式并保存；事件录像中间空白不一定是故障，需确认本地录像已开启。",
+      "source_ids": [
+        "record"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "RECORD-PLAY",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "录像",
+      "title": "查找某一天的存储卡回放",
+      "symptoms": [
+        "在哪看昨天存储卡保存的录像？",
+        "回放页面找不到某个日期的录像。"
+      ],
+      "content": "从实时画面进入 Playback & Download，选择 SD Card 和正确日期，再拖动时间轴。找不到片段时，核对该时段的录制计划、卡状态和本地录像开关。",
+      "source_ids": [
+        "record"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "NOTIFY-MISSING",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "通知",
+      "title": "侦测有记录但手机不推送",
+      "symptoms": [
+        "录像里有人经过，但是手机收不到通知。",
+        "只有晚上没有消息提醒，白天推送正常。"
+      ],
+      "content": "确认 Tapo App 内的设备通知和手机系统通知权限都开启，再检查手机勿扰模式与通知时间计划。仅某时段收不到时可临时设为 Always 测试；同时确认侦测事件确实触发。",
+      "source_ids": [
+        "notify"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "NOTIFY-DELAY",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "通知",
+      "title": "Android 锁屏后通知延迟",
+      "symptoms": [
+        "安卓手机锁屏后不提醒，打开 App 才来通知。",
+        "消息总晚好几分钟，后台省电会影响吗？"
+      ],
+      "content": "Android 锁屏或退到后台后通知延迟，可检查 Tapo 的后台运行、自启动和电池限制，按手机系统设置允许通知与后台活动。对比解锁前后和 Wi-Fi、流量下的表现，再记录测试结果。",
+      "source_ids": [
+        "notify"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "DETECT-ZONE",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "侦测",
+      "title": "有人经过却不触发移动侦测",
+      "symptoms": [
+        "有人经过却没有侦测事件，活动区域怎么设置？",
+        "移动侦测漏报，灵敏度在哪里调整？"
+      ],
+      "content": "在设备设置的 Detection 中确认需要的侦测类型开启，检查灵敏度及 Detection Zones 是否覆盖人物经过区域。按实际支持功能测试，记录是否产生事件或录像，再区分侦测失败与通知失败。",
+      "source_ids": [
+        "detect"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "DETECT-GLASS",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "画面",
+      "title": "隔玻璃夜视反光、发白或侦测异常",
+      "symptoms": [
+        "放在窗后夜视全是反光，画面发白。",
+        "隔着玻璃晚上看不清，还经常漏检。"
+      ],
+      "content": "夜间隔玻璃拍摄可能出现眩光和红外反射，使图像不清、侦测不准。调整摆位，避免摄像头正对玻璃，再对比夜间画面及侦测结果。",
+      "source_ids": [
+        "detect"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "IMAGE-INVERT",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "画面",
+      "title": "倒装或吊装后画面颠倒，人物头朝下",
+      "symptoms": [
+        "摄像头倒着装在天花板上，画面也是倒的。",
+        "画面上下颠倒，在哪旋转 180 度？",
+        "吊装、头朝下、图像反了，需要把画面转回来"
+      ],
+      "content": "在 Tapo App 打开该摄像头的设备设置，进入 Video & Display，切换 Invert Image，旋转画面 180 度。菜单译名和位置以当前 App 为准。",
+      "source_ids": [
+        "invert"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "AUDIO-RECORD",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "声音",
+      "title": "实时有声音但录像回放无声",
+      "symptoms": [
+        "实时有声音，存储卡回放却没有声音。",
+        "录像无声，Record Sound 开关在哪？"
+      ],
+      "content": "核对 Storage & Recording 中 Record Sound 是否开启，并检查实时页麦克风音量。下载一段录像用其他播放器对比，可判断是录音轨缺失还是播放问题；开启录音只影响之后录制的内容。",
+      "source_ids": [
+        "audio"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "AUDIO-TALK",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "声音",
+      "title": "手机对讲时摄像头端听不到",
+      "symptoms": [
+        "我在手机里说话，摄像头那边的人听不到。",
+        "双向对讲没声音，要开手机麦克风权限吗？"
+      ],
+      "content": "核对手机授予 Tapo 麦克风权限，检查手机麦克风及是否连着蓝牙耳机；再检查 Talk 页的摄像头扬声器、麦克风音量，并确认网络稳定。",
+      "source_ids": [
+        "audio"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    },
+    {
+      "id": "AUDIO-LISTEN",
+      "device_models": [
+        "Tapo C200",
+        "Tapo C210"
+      ],
+      "topic": "声音",
+      "title": "手机听不到摄像头现场声音",
+      "symptoms": [
+        "手机预览听不到房间里的声音。",
+        "摄像头声音很小又断断续续，该先查什么？"
+      ],
+      "content": "调高手机媒体音量及 Tapo 中摄像头麦克风音量，检查麦克风孔是否被灰尘遮挡并轻柔清理。若伴随断续和延迟，再检查无线信号，不能只凭无声断定硬件损坏。",
+      "source_ids": [
+        "audio"
+      ],
+      "scope": "C200/C210 的通用排障步骤。英文站点 App 路径可能随版本、地区变化，以设备实际界面为准。"
+    }
+  ]
+}

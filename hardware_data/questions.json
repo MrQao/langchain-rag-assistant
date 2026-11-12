@@ -1,0 +1,636 @@
+{
+  "description": "人工编写的练习与检索回归问题，不是真实客户工单。expected_ids 表示前 3 条证据应至少命中一项。",
+  "cases": [
+    {
+      "id": "Q001",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "C200 V1 能连 5G Wi-Fi 吗？",
+      "expected_ids": [
+        "C200-WIFI"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q002",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "我的 C200 V1 连不上只开 WPA3 的路由器。",
+      "expected_ids": [
+        "C200-WIFI"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q003",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "C210 V1 为什么搜不到 5 GHz 网络？",
+      "expected_ids": [
+        "C210-WIFI"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q004",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "C210 V1 支持 WPA3-only 无线网络吗？",
+      "expected_ids": [
+        "C210-WIFI"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q005",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "新买的摄像头第一次怎么添加到手机？",
+      "expected_ids": [
+        "SETUP-START"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q006",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "刚开箱，应该用哪个 App 配网？",
+      "expected_ids": [
+        "SETUP-START"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q007",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "换了路由器之后摄像头连不上 Wi-Fi。",
+      "expected_ids": [
+        "SETUP-CHANGE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q008",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "改了无线名称和密码后摄像头离线了。",
+      "expected_ids": [
+        "SETUP-CHANGE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q009",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "连上 Tapo_Cam 后手机提示无法上网，要断开吗？",
+      "expected_ids": [
+        "WIFI-HOTSPOT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q010",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "iPhone 提示 Unable to Connect to Your Tapo Device。",
+      "expected_ids": [
+        "WIFI-HOTSPOT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q011",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "配网时列表里找不到家里的 Wi-Fi 名称。",
+      "expected_ids": [
+        "WIFI-SSID"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q012",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "路由器隐藏了 SSID，摄像头怎么连接？",
+      "expected_ids": [
+        "WIFI-SSID"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q013",
+      "device_model": "Tapo C200",
+      "topic": "配网",
+      "question": "配对失败，一直提示 Failed to receive an IP address。",
+      "expected_ids": [
+        "WIFI-PAIR"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q014",
+      "device_model": "Tapo C210",
+      "topic": "配网",
+      "question": "摄像头接扩展器总是 Pairing Failed，怎么办？",
+      "expected_ids": [
+        "WIFI-PAIR"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q015",
+      "device_model": "Tapo C200",
+      "topic": "离线",
+      "question": "摄像头加了电源延长线之后经常离线。",
+      "expected_ids": [
+        "VIEW-POWER"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q016",
+      "device_model": "Tapo C210",
+      "topic": "离线",
+      "question": "一天掉线好几次，有时像是自己重启。",
+      "expected_ids": [
+        "VIEW-POWER"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q017",
+      "device_model": "Tapo C200",
+      "topic": "离线",
+      "question": "在家 Wi-Fi 能看，一出门用流量就显示离线。",
+      "expected_ids": [
+        "VIEW-REMOTE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q018",
+      "device_model": "Tapo C210",
+      "topic": "离线",
+      "question": "局域网正常，远程看不到画面，怎么排查？",
+      "expected_ids": [
+        "VIEW-REMOTE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q019",
+      "device_model": "Tapo C200",
+      "topic": "画面",
+      "question": "实时画面一直转圈，加载很慢。",
+      "expected_ids": [
+        "VIEW-SLOW"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q020",
+      "device_model": "Tapo C210",
+      "topic": "画面",
+      "question": "高清预览很卡，降低画质能排查吗？",
+      "expected_ids": [
+        "VIEW-SLOW"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q021",
+      "device_model": "Tapo C200",
+      "topic": "离线",
+      "question": "怎么查看摄像头的 RSSI 信号强度？",
+      "expected_ids": [
+        "SIGNAL-RSSI"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q022",
+      "device_model": "Tapo C210",
+      "topic": "离线",
+      "question": "隔了两堵墙信号很差，移动位置有用吗？",
+      "expected_ids": [
+        "SIGNAL-RSSI"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q023",
+      "device_model": "Tapo C200",
+      "topic": "重置",
+      "question": "离线摄像头能直接在 App 里重置吗？",
+      "expected_ids": [
+        "RESET-CONFIRM"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q024",
+      "device_model": "Tapo C210",
+      "topic": "重置",
+      "question": "恢复出厂设置前要注意什么？",
+      "expected_ids": [
+        "RESET-CONFIRM"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q025",
+      "device_model": "Tapo C200",
+      "topic": "存储卡",
+      "question": "新卡插进去提示需要初始化，怎么操作？",
+      "expected_ids": [
+        "SD-FORMAT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q026",
+      "device_model": "Tapo C210",
+      "topic": "存储卡",
+      "question": "格式化摄像头存储卡会删除以前录像吗？",
+      "expected_ids": [
+        "SD-FORMAT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q027",
+      "device_model": "Tapo C200",
+      "topic": "存储卡",
+      "question": "插上 microSD 后一直提示未检测到存储卡。",
+      "expected_ids": [
+        "SD-DETECT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q028",
+      "device_model": "Tapo C210",
+      "topic": "存储卡",
+      "question": "存储卡在电脑上正常，摄像头却识别不了。",
+      "expected_ids": [
+        "SD-DETECT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q029",
+      "device_model": "Tapo C200",
+      "topic": "存储卡",
+      "question": "microSD 初始化失败，格式化一直报错。",
+      "expected_ids": [
+        "SD-FAILED"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q030",
+      "device_model": "Tapo C210",
+      "topic": "存储卡",
+      "question": "存储卡隔几天就要求重新格式化。",
+      "expected_ids": [
+        "SD-FAILED"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q031",
+      "device_model": "Tapo C200",
+      "topic": "录像",
+      "question": "插卡成功也能看实时画面，可是没有录像。",
+      "expected_ids": [
+        "RECORD-ENABLE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q032",
+      "device_model": "Tapo C210",
+      "topic": "录像",
+      "question": "开了移动侦测为什么没有全天录像？",
+      "expected_ids": [
+        "RECORD-ENABLE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q033",
+      "device_model": "Tapo C200",
+      "topic": "录像",
+      "question": "录像一段一段的，中间很长时间空白。",
+      "expected_ids": [
+        "RECORD-GAPS"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q034",
+      "device_model": "Tapo C210",
+      "topic": "录像",
+      "question": "只在有人移动时录像，怎样改成连续录像？",
+      "expected_ids": [
+        "RECORD-GAPS"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q035",
+      "device_model": "Tapo C200",
+      "topic": "录像",
+      "question": "在哪看昨天存储卡保存的录像？",
+      "expected_ids": [
+        "RECORD-PLAY"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q036",
+      "device_model": "Tapo C210",
+      "topic": "录像",
+      "question": "回放页面找不到某个日期的录像。",
+      "expected_ids": [
+        "RECORD-PLAY"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q037",
+      "device_model": "Tapo C200",
+      "topic": "通知",
+      "question": "录像里有人经过，但是手机收不到通知。",
+      "expected_ids": [
+        "NOTIFY-MISSING"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q038",
+      "device_model": "Tapo C210",
+      "topic": "通知",
+      "question": "只有晚上没有消息提醒，白天推送正常。",
+      "expected_ids": [
+        "NOTIFY-MISSING"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q039",
+      "device_model": "Tapo C200",
+      "topic": "通知",
+      "question": "安卓手机锁屏后不提醒，打开 App 才来通知。",
+      "expected_ids": [
+        "NOTIFY-DELAY"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q040",
+      "device_model": "Tapo C210",
+      "topic": "通知",
+      "question": "消息总晚好几分钟，后台省电会影响吗？",
+      "expected_ids": [
+        "NOTIFY-DELAY"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q041",
+      "device_model": "Tapo C200",
+      "topic": "侦测",
+      "question": "有人经过却没有侦测事件，活动区域怎么设置？",
+      "expected_ids": [
+        "DETECT-ZONE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q042",
+      "device_model": "Tapo C210",
+      "topic": "侦测",
+      "question": "移动侦测漏报，灵敏度在哪里调整？",
+      "expected_ids": [
+        "DETECT-ZONE"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q043",
+      "device_model": "Tapo C200",
+      "topic": "画面",
+      "question": "放在窗后夜视全是反光，画面发白。",
+      "expected_ids": [
+        "DETECT-GLASS"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q044",
+      "device_model": "Tapo C210",
+      "topic": "画面",
+      "question": "隔着玻璃晚上看不清，还经常漏检。",
+      "expected_ids": [
+        "DETECT-GLASS"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q045",
+      "device_model": "Tapo C200",
+      "topic": "画面",
+      "question": "摄像头倒着装在天花板上，画面也是倒的。",
+      "expected_ids": [
+        "IMAGE-INVERT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q046",
+      "device_model": "Tapo C210",
+      "topic": "画面",
+      "question": "画面上下颠倒，在哪旋转 180 度？",
+      "expected_ids": [
+        "IMAGE-INVERT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q047",
+      "device_model": "Tapo C200",
+      "topic": "声音",
+      "question": "实时有声音，存储卡回放却没有声音。",
+      "expected_ids": [
+        "AUDIO-RECORD"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q048",
+      "device_model": "Tapo C210",
+      "topic": "声音",
+      "question": "录像无声，Record Sound 开关在哪？",
+      "expected_ids": [
+        "AUDIO-RECORD"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q049",
+      "device_model": "Tapo C200",
+      "topic": "声音",
+      "question": "我在手机里说话，摄像头那边的人听不到。",
+      "expected_ids": [
+        "AUDIO-TALK"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q050",
+      "device_model": "Tapo C210",
+      "topic": "声音",
+      "question": "双向对讲没声音，要开手机麦克风权限吗？",
+      "expected_ids": [
+        "AUDIO-TALK"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q051",
+      "device_model": "Tapo C200",
+      "topic": "声音",
+      "question": "手机预览听不到房间里的声音。",
+      "expected_ids": [
+        "AUDIO-LISTEN"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q052",
+      "device_model": "Tapo C210",
+      "topic": "声音",
+      "question": "摄像头声音很小又断断续续，该先查什么？",
+      "expected_ids": [
+        "AUDIO-LISTEN"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q053",
+      "device_model": "C9",
+      "topic": "资料边界",
+      "question": "换路由器后连不上。",
+      "expected_ids": [],
+      "expected_route": "no_evidence",
+      "note": "未收录的型号"
+    },
+    {
+      "id": "Q054",
+      "device_model": "C1",
+      "topic": "资料边界",
+      "question": "摄像头连不上 Wi-Fi。",
+      "expected_ids": [],
+      "expected_route": "no_evidence",
+      "note": "旧模拟型号"
+    },
+    {
+      "id": "Q055",
+      "device_model": "C2000",
+      "topic": "资料边界",
+      "question": "摄像头配对失败。",
+      "expected_ids": [],
+      "expected_route": "no_evidence",
+      "note": "不能误匹配 C200"
+    },
+    {
+      "id": "Q056",
+      "device_model": "其他品牌 C200",
+      "topic": "资料边界",
+      "question": "无法配网。",
+      "expected_ids": [],
+      "expected_route": "no_evidence",
+      "note": "不能跨品牌匹配"
+    },
+    {
+      "id": "Q057",
+      "device_model": "Tapo C200",
+      "topic": "资料边界",
+      "question": "如何做红烧肉？",
+      "expected_ids": [],
+      "expected_route": "no_evidence",
+      "note": "资料库不覆盖的问题"
+    },
+    {
+      "id": "Q058",
+      "device_model": "Tapo C210",
+      "topic": "资料边界",
+      "question": "如何计算房贷利率？",
+      "expected_ids": [],
+      "expected_route": "no_evidence",
+      "note": "资料库不覆盖的问题"
+    },
+    {
+      "id": "Q059",
+      "device_model": "Tapo C200",
+      "topic": "口语改述",
+      "question": "我吊装之后人都头朝下，在哪改回来",
+      "expected_ids": [
+        "IMAGE-INVERT"
+      ],
+      "expected_route": "generate_reply"
+    },
+    {
+      "id": "Q060",
+      "device_model": "Tapo C210",
+      "topic": "口语改述",
+      "question": "我只想有人经过才存视频，现在录个不停",
+      "expected_ids": [
+        "RECORD-GAPS"
+      ],
+      "expected_route": "generate_reply"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "FLOW-01",
+      "device_model": "Tapo C200",
+      "issue": "换了路由器之后摄像头连不上 Wi-Fi。",
+      "feedback": [
+        "已解决"
+      ],
+      "expected": "一轮建议后结束"
+    },
+    {
+      "id": "FLOW-02",
+      "device_model": "Tapo C210",
+      "issue": "存储卡一直无法识别。",
+      "feedback": [
+        "关机重插后仍无法识别",
+        "换兼容卡后仍失败"
+      ],
+      "expected": "最多两轮后生成接手摘要，保留两轮日志"
+    },
+    {
+      "id": "FLOW-03",
+      "device_model": "Tapo C200",
+      "issue": "夜间隔玻璃拍摄画面发白。",
+      "feedback": [
+        "/exit"
+      ],
+      "expected": "关闭进程、重新启动，选择原编号后继续等待反馈"
+    },
+    {
+      "id": "FLOW-04",
+      "device_model": "C9",
+      "issue": "摄像头连不上网络。",
+      "feedback": [],
+      "expected": "无资料出口，保留型号边界"
+    }
+  ]
+}
